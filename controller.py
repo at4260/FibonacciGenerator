@@ -1,4 +1,3 @@
-import gevent
 import utils
 
 from flask import Flask, render_template
