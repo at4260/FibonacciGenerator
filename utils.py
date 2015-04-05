@@ -1,10 +1,9 @@
 def get_fibonacci(n):
-    if type(n) is not int or n < 0:
-        return None
+    if n < 0:
+        return "Not valid"
+    elif n == 0:
+        return 0
+    elif n == 1:
+        return 1
     else:
-        fib_list = [0,1]
-        index = 2
-        while index <= n:
-            fib_list.append(fib_list[index - 1] + fib_list[index - 2])
-            index += 1
-        return fib_list[n]
+        return get_fibonacci(n - 1) + get_fibonacci(n - 2)
