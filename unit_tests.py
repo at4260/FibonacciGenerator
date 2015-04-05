@@ -27,17 +27,9 @@ class FibonacciTestCase(unittest.TestCase):
         self.assertEqual(utils.get_fibonacci(
             10), 55)
 
-    def test_user_results_string(self):
-        self.assertEqual(utils.get_fibonacci(
-            "test"), None)
-
     def test_user_results_neg(self):
         self.assertEqual(utils.get_fibonacci(
-            -1), None)
-
-    def test_user_results_float(self):
-        self.assertEqual(utils.get_fibonacci(
-            4.5), None)
+            -1), "Not valid")
 
 if __name__ == "__main__":
     unittest.main()
