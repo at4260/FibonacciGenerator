@@ -12,7 +12,7 @@ app.secret_key = "key"
 def get_fib_value(n):
     fib_value = utils.get_fibonacci(n)
     print fib_value
-    return render_template("fib.html", fib_value = fib_value)
+    return render_template("fib.html", fib_value=fib_value)
 
-server = wsgi.WSGIServer(('127.0.0.1', 8000),app)
+server = wsgi.WSGIServer(('127.0.0.1', 8000), app)
 server.serve_forever()
