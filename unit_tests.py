@@ -1,35 +1,37 @@
+"""
+Unit tests to check that the fibonacci function is working
+properly.
+
+Only zero, positive, and negative integers are tested here.
+Strings and floats are checked in controller.py when the type
+is being converted to integers.
+"""
+
 import unittest
 import utils
 
 
 class FibonacciTestCase(unittest.TestCase):
     def test_user_results_zero(self):
-        self.assertEqual(utils.get_fibonacci(
-            0), 0)
+        self.assertEqual(utils.get_fibonacci(0), 0)
 
     def test_user_results_one(self):
-        self.assertEqual(utils.get_fibonacci(
-            1), 1)
+        self.assertEqual(utils.get_fibonacci(1), 1)
 
     def test_user_results_two(self):
-        self.assertEqual(utils.get_fibonacci(
-            2), 1)
+        self.assertEqual(utils.get_fibonacci(2), 1)
 
     def test_user_results_five(self):
-        self.assertEqual(utils.get_fibonacci(
-            5), 5)
+        self.assertEqual(utils.get_fibonacci(5), 5)
 
     def test_user_results_seven(self):
-        self.assertEqual(utils.get_fibonacci(
-            7), 13)
+        self.assertEqual(utils.get_fibonacci(7), 13)
 
     def test_user_results_ten(self):
-        self.assertEqual(utils.get_fibonacci(
-            10), 55)
+        self.assertEqual(utils.get_fibonacci(10), 55)
 
     def test_user_results_neg(self):
-        self.assertEqual(utils.get_fibonacci(
-            -1), "Not valid")
+        self.assertEqual(utils.get_fibonacci(-1), "Not valid")
 
 if __name__ == "__main__":
     unittest.main()
