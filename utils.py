@@ -1,10 +1,10 @@
 def memoize(func):
     cached = {}
-    def helper(x):
-        if x not in cached:
-            cached[x] = func(x)
+    def helper(n):
+        if n not in cached:
+            cached[n] = func(n)
             # print cached
-        return cached[x]
+        return cached[n]
     return helper
 
 @memoize
